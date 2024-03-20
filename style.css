@@ -1,0 +1,20 @@
+body{
+    background:whitesmoke;;
+}
+h1{
+    color: #fff;
+}
+.image{
+    height: 30vh;
+    background: url('m2\ 3.jpeg');
+    width: 255px;
+}
+.sound{
+    display:flex;
+    border-radius: 0px;
+    border-bottom: 1px solid yellowgreen;
+}
+.great{
+    max-height: fit-content;
+    display: flex;
+}

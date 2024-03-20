@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <style>
+    .copy {
+      display: flex;
+      height: 35px;
+      padding: 42px;
+      width: 235px;
+      padding-top: inherit;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    .bg-image {
+      position: relative;
+      filter: grayscale(50%);
+      width: 100%;
+      background: url("images/shown.jpeg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      min-height: 75vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      font-family: sans-serif;
+    }
+    .bg-image .title {
+      font-size: 75px;
+      font-weight: 600;
+      color: #fff;
+      text-align: center;
+    }
+    .nav-bar {
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+      background: #000;
+      padding: 10px;
+    }
+    .nav-bar button {
+      width: 25%;
+      outline: none;
+      border: none;
+      background: none;
+      padding: 10px;
+      transition: 0.4s;
+    }
+    .nav-bar button:hover {
+      background: #fff;
+    }
+    .nav-bar button:hover a {
+      color: #000;
+    }
+    .nav-bar button a {
+      text-align: center;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: #fff;
+    }
+    .cafe-details {
+      padding: 0 30px;
+      position: absolute;
+      bottom: 10px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      font-size: 15px;
+    }
+    .cafe-details .opening-closing-desc {
+      background: #000;
+      color: #fff;
+      padding: 5px;
+      font-family: sans-serif;
+    }
+    .cafe-details .address-desc {
+      color: #fff;
+    }
+
+    /*        about          */
+
+    .about {
+    }
+
+    .cafe-heading {
+      text-align: center;
+      text-transform: uppercase;
+      padding-top: 64px;
+      padding-bottom: 64px;
+      box-sizing: inherit;
+      font-size: 18px;
+      text-align: -webkit-center;
+      font-weight: 400;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    .cafe-pragh {
+      text-align: center;
+      text-transform: math-auto;
+      box-sizing: inherit;
+      font-size: 18px;
+      text-align: -webkit-center;
+    }
+    .cafe-pragh p {
+      font-size: 18px;
+      max-width: 700px;
+      padding-top: inherit;
+      text-align: left;
+      letter-spacing: 1px;
+    }
+    .paragh-border {
+      box-sizing: inherit;
+      background-color: rgb(234, 233, 233);
+      margin-top: 16px;
+      margin-bottom: 16px;
+      width: max-content;
+      border-left: 6px solid #ccc;
+      line-height: 1.5;
+      font-style: italic;
+      padding: 5px 20px;
+    }
+    .img-setting {
+      display: flex;
+      justify-content: center;
+    }
+
+    .img-setting img {
+      width: 52%;
+      filter:grayscale();
+    }
+
+    .opening-time {
+      width: 52%;
+    margin: auto;
+    }
+    .m-around {
+      background-color: #000;
+      color: white;
+      width: max-content;
+      margin:auto;
+      font-family: sans-serif;
+      margin-top: 35px;
+      margin-bottom: 35px;
+      padding: 0.1%;
+    }
+    .body-eating{
+      width: 52%;
+      margin:auto;
+    }
+    .body-eating .buttons{
+        display: flex;
+        box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 
+        0 2px 10px 0 rgba(0,0,0,0.12);
+        border-radius: 5%;
+        background: none;
+        outline: none;
+        padding: 8px 16px;
+
+      }
+      .body-eating .eat-detail{
+        border-radius: 0;
+        box-sizing: content-box;
+        outline: #000;
+        box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+        padding-top: 48px;
+        padding-bottom: 48px;
+        line-height: 2em;
+        padding: 48px 16px;
+}
+      }
+      .body-eating .buttons button{
+        background: #fff;
+          
+        }
+      .body-eating .buttons button:first-child{
+        background-color: #000;
+        color: #fff;
+       
+      }
+    
+  </style>
+  <body>
+    <nav class="nav-bar">
+      <button>
+        <a href="home.html">Home</a>
+      </button>
+      <button>
+        <a href="about.html">about</a>
+      </button>
+      <button>
+        <a href="menu.html">Menu</a>
+      </button>
+      <button>
+        <a href="Where.html">Where</a>
+      </button>
+    </nav>
+    <section class="bg-image">
+      <h2 class="title">the</h2>
+      <br />
+      <h3 class="title">Cafe</h3>
+      <div class="cafe-details">
+        <p class="opening-closing-desc">Open from 6am to 5pm</p>
+        <p class="address-desc">15 Adr street,5015</p>
+      </div>
+    </section>
+    <section class="about">
+      <div class="cafe-heading">
+        <h style="background-color: #000; color: #fff; font-size: 25px"
+          >about the cafe</h
+        >
+      </div>
+      <div class="cafe-pragh">
+        <p>
+          The Cafe was founded in blabla by Mr. Smith in lorem ipsum dolor sit
+          amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+          labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+          exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </p>
+        <br />
+        <p>
+          In addition to our full espresso and brew bar menu, we serve fresh
+          made-to-order breakfast and lunch sandwiches, as well as a selection
+          of sides and salads and other good stuff.
+        </p>
+        <div class="paragh-border">
+          <p>
+            "Use products from nature for what it's worth - but never too early,
+            nor too late." Fresh is the new sweet.<br />
+            Chef, Coffeeist and Owner: Liam Brown
+          </p>
+        </div>
+      </div>
+      <div class="img-setting">
+        <img src="images/ coffe image 2.jpeg" />
+      </div>
+    </section>
+    <section>
+      <div class="opening-time">
+        <p style="text-align: center; box-sizing: inherit; width: max-content">
+          <strong>Opening hours:</strong> everyday from 6am to 5pm.
+        </p>
+        <br />
+        <p style="text-align: center; box-sizing: inherit; width: max-content">
+          <strong>Address:</strong> 15 Adr street, 5015, NY
+        </p>
+      </div>
+      <div class="m-around">
+        <p style="font-size: 18px">The Menu</p>
+      </div>
+      <div class="body-eating">
+      <div class="buttons">
+        <button style="width:50%; font-size:18px">Eat</button>
+        <button style="width:50%; font-size:18px; border:none">Drink</button>
+      </div>
+      <div class="eat-detail">
+        <p>Bread Basket</p>
+        <p>Assortment of fresh baked fruit breads and muffins 5.50</p>
+        <br>
+        <p>Honey Almond Granola with Fruits</p>
+        <p>Natural cereal of honey toasted oats, raisins, almonds and dates 7.0</p><br>
+        <p>Belgian Waffle</p>
+        <p>Vanilla flavored batter with malted flour 7.50</p><br>
+        <p>Scrambled eggs</p>
+        <p>Scrambled eggs, roasted red pepper and garlic, with green onions 7.50</p><br>
+        <p>Blueberry Pancakes</p>
+        <p>With syrup, butter and lots of berries 8.50</p>
+        <br>
+      </div>
+    </div>
+    </section>
+  </body>
+</html>
