@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+    />
+  </head>
+  <style>
+    body {
+      padding: 15px;
+      margin: 0;
+      font-size: 16px;
+      font-family: sans-serif;
+    }
+    @media (max-width:900px){
+        .main-doc{
+            min-height: 175vh;
+            min-width: 675px;
+        }
+        .button{
+            display: none;
+        }
+        .txt-information{
+            flex-direction: column;
+            margin: 0px;
+            width: 100%;
+        }
+        .rightr-cntnt{
+            margin: 50px 0px;
+        }
+        .prnt-knit{
+            min-width: 640px;
+
+        }
+        .midd-txt.third-frnt{
+            width: 65px;
+        }
+        .third-frnt{
+            min-width: 13%;
+        }
+        .kntd-img{
+            min-width: 33%;
+
+        }
+        .cards-doc{
+            min-height: 170vh;
+            min-width: 800px;
+        }
+        .lstPart{
+            display: none;
+            min-width: 110%;
+        }
+        .parntOfCards{
+            display: none;
+            min-width: 620px;
+        }
+        .first-text{
+            margin: 0px;
+        }
+        .thrd-doc{
+            min-height: 150vh;
+            min-width: 600px;
+        }
+        .last-doc{
+            min-height: 250vh;
+            min-width: 712px;
+        }
+        .forth-doc{
+            min-width: 80%;
+            margin: 0px;
+        }
+        .lefter-img{
+            display: none;
+            min-width: 630px;
+        }
+        .prntLogos{
+            min-width: 60%;
+        } 
+        .wrttnLogos{
+            min-width: 60%;
+        }
+        .prntInform{
+            gap: 50px; 
+        }
+        .prntBttn{
+            display: none;
+            margin: 0;
+        }
+    }
+    .main-doc {
+      height: 95vh;
+      background-image: url(images/purses.jpeg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      border-bottom: 5px solid black;
+    }
+    .background-pic {
+      height: 80vh;
+      position: relative;
+    }
+    .front {
+      text-align: center;
+    }
+    nav {
+      display: flex;
+      width: 100%;
+      background-color: transparent;
+      justify-content: space-between;
+      max-height: 2.5rem;
+      z-index: 2;
+    }
+    .text-first {
+      display: flex;
+      gap: 5px;
+      background: transparent;
+      font-size: 13px;
+      text-align: center;
+      padding: 0px 10px;
+      width: 13%;
+      z-index: 1;
+      font-family: sans-serif;
+      color: white;
+      backdrop-filter: contrast(0.5);
+      margin: 30px;
+    }
+    .midd-txt {
+      display: block;
+      z-index: 1;
+      position: relative;
+    }
+    .third-frnt {
+      border: 1px solid black;
+      color: black;
+      background-color: white;
+      width: 7%;
+      display: flex;
+      padding: 0px 8px;
+      border-radius: 8px;
+      justify-content: space-around;
+      font-size: 20px;
+      align-items: center;
+      height: 2.5rem;
+      z-index: 1;
+      margin-top: 25px;
+      margin-right: 25px;
+    }
+    .txt-information {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 145px;
+    }
+    .prnt-knit {
+      display: flex;
+      justify-content: space-between;
+      margin: 0px 50px;
+    }
+    .kntd-img {
+      border: 2px solid white;
+      border-radius: 18px;
+      background-color: white;
+      width: 14%;
+      padding: 10px;
+    }
+    .stylish-bag{
+        width: 20%;
+        padding: 5px 5px;
+    }
+
+    .dcvr-btn {
+      display: flex;
+      justify-content: end;
+    }
+
+    .rightr-cntnt {
+      display: block;
+    }
+    .togthr-logo {
+      display: block;
+      border: 1px solid #c9c9c9;
+      background-color: #c9c9c9;
+      height: fit-content;
+      border-radius: 40px;
+      padding: 8px 7px;
+      width: 35px;
+    }
+    .prnt-2logo {
+      display: flex;
+      gap: 25px;
+      flex-direction: column;
+    }
+    .third-logo {
+      border: white;
+      background-color: white;
+      height: 45px;
+      border-radius: 40px;
+      padding: 15px 15px;
+      display: inline-table;
+    }
+    .setting {
+      display: flex;
+      justify-content: end;
+      margin-right: 45px;
+    }
+    .cards-doc {
+      height: 100vh;
+      margin: 0px;
+      padding: 0px;
+      border-bottom: 5px solid white;
+    }
+    .container {
+      background-image: url(images/main-purse.webp);
+      background-repeat: no-repeat;
+      height: 260%;
+      width: 28%;
+      border-radius: 18px;
+      border: none;
+    }
+    .background-image {
+      border-radius: 8px;
+    }
+    .wrte-contnt {
+      display: block;
+      position: relative;
+    }
+    .firstTxtOnPic {
+      display: block;
+      padding: 15px;
+      border-radius: 15px;
+    }
+    .first-text {
+      margin: 50px 115px;
+      display: flex;
+      justify-content: space-between;
+      height: 10rem;
+    }
+    .initialText{
+        display: block;
+    }
+    .sndCardTxt {
+      display: block;
+      padding: 30px 15px;
+    }
+    .third-card {
+      display: block;
+      padding: 15px 15px;
+      height: 385px;
+    }
+    .parntOfCards {
+      display: flex;
+      gap: 65px;
+      justify-content: left;
+      margin-left: 100px;
+      margin-top: 50px;
+      width: 100%;
+    }
+    .bth-btns {
+      display: flex;
+      gap: 20px;
+    }
+    .lstPart {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 10%;
+    }
+    .thrd-doc {
+      height: 80vh;
+      margin: 0px;
+      margin-bottom: 100px;
+      padding: 50px;
+      background-image: url(images/third.jpeg);
+      border-bottom: 5px solid white;
+    }
+    .prntBttn{
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+    }
+    .bttns-sttngs {
+      display: flex !important;
+      justify-content: center;
+      gap: 40px;
+    }
+
+    .intror-bttns {
+      display: block;
+      text-align: left;
+    }
+    .twoBttnsttngs {
+      display: flex;
+      height: 500px;
+      gap: 30px;
+    }
+    .last-doc {
+      height: 118vh;
+      margin: 0px;
+      padding: 0px;
+      border-bottom: 5px solid black;
+    }
+    .forth-doc {
+      margin: 50px 145px;
+    }
+    .frth-heading {
+      display: flex;
+      justify-content: space-between;
+    }
+    .last-blocks{
+        display: flex;
+        gap: 10px;
+    }
+    .finallyBagsPrice{
+        display: flex;
+        gap: 20px;
+        margin-top: 50px;
+    }
+    .parentBttns{
+        display: block;
+    }
+    .lefter-img{
+        display: flex;
+        gap: 40px;
+        justify-content: left;
+        padding: 50px 130px;
+    }
+    .prntLftr{
+        display: block;
+
+    }
+    .mainLftrimg{
+        display: block;
+    }
+    .bttnLftrimg{
+        display: block;
+        height: 21px;
+    }
+    .prnt{
+        display: flex;
+        justify-content: space-between;
+    }
+    .text{
+        display: flex;
+    }
+    .logo{
+        display: flex;
+    }
+    .firstInform{
+        display: block;
+    }
+    .secndInform{
+        display: block;
+    }
+    .thirdInform{
+        display: block;
+    }
+    .prntInform{
+        display: flex;
+        gap: 100px;
+        justify-content: center;
+    }
+    .input-wrapper { 
+        position: relative; 
+        display: inline-block; 
+    } 
+  
+    .input-wrapper input { 
+        padding-right: 40px; 
+    } 
+  
+    .input-wrapper button { 
+        position: absolute; 
+        top: 0; 
+        right: 0; 
+        border: none; 
+        background-color: transparent; 
+        cursor: pointer; 
+    } 
+    .bottomText{
+        display: block;
+        text-align: right;
+    }
+    .prntLogos{
+        display: flex;
+        justify-content: space-between;
+        padding: 15px 220px;
+    }
+    .visaCards{
+        display: flex;
+        gap: 2px;
+    }
+    .svgLogo{
+        display: flex;
+        gap: 5px;
+    }
+    .wrttnLogos{
+        display: flex;
+        justify-content: space-between;
+        padding: 15px 220px;
+        border-top: 2px solid black;
+    }
+</style>
+  <body>
+    <section class="main-doc">
+      <nav>
+        <div class="text-first">
+          <button style="display: flex; gap: 10px; height: 43px;
+          border-radius: 7px;
+          filter: contrast(0.5);">
+            <p>Store</p>
+            <p>About</p>
+            <p>Coorporation</p>
+            <p>Contact</p>
+          </button>
+        </div>
+        <div class="midd-txt">
+          <p
+            style="font-weight: 900; font-size: 30px; margin: 0px; color: white"
+          >
+            kHiY
+          </p>
+          <p style="color: lightgray; row-gap: 2px; margin-top: 5px">B A G S</p>
+        </div>
+        <div class="third-frnt">
+          Menu
+        <img src="images/bar2.png" alt="bar2" style="height: 33px;">
+      </div>
+      </nav>
+
+      <div class="txt-information">
+        <p style="font-size: 70px; color: white">
+          Discover the perfect<br />
+          blend of style
+        </p>
+
+        <div class="rightr-cntnt">
+          <p style="color: white; margin: 70px 0px; font-size: 80%">
+            Discover the perfect blend of style, craftsmanship, and <br />
+            sustainability with Knitty Chic Bags. Our unique, handmade<br />
+            knitted bags are designed to add a touch of elegance and<br />
+            individuality to your everyday wardrobe.
+          </p>
+          <div class="dcvr-btn">
+            <button
+              style="
+                background-color: #ffc107;
+                border-radius: 8px;
+                padding: 11px 15px;
+              "
+            >
+              Discover More
+              <i
+                class="fa fa-angle-right"
+                style="font-size: 18px"
+                aria-hidden="true"
+              ></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="prnt-knit">
+        <div class="kntd-img">
+         
+        <img class="stylish-bag" src="images/knitted bags.webp"
+        style="height: 170px; border-radius: 15px;
+        width: 204px;"
+        alt="bags" alt="bag">
+
+          <p
+            style="
+              color: black;
+              background-color: white;
+              font-size: 25px;
+              margin: 0px;
+            "
+          >
+            Knitted bag
+          </p>
+          <div style="display: flex; justify-content: space-between">
+            <p style="padding: 0px">$159</p>
+            <img src="images/arrow two.webp" style="height: 50px" alt="" />
+          </div>
+        </div>
+        <div class="prnt-2logo">
+          <i
+            class="fa fa-pause"
+            aria-hidden="true"
+            style="
+              background-color: lightgray;
+              border: 1px solid lightgray;
+              height: 27px;
+              padding: 7px 10px;
+              border-radius: 23px;
+              font-size: 24px;
+              width: 23px;
+            "
+          ></i>
+          <div class="togthr-logo">
+            <i
+              class="fa fa-volume-off"
+              aria-hidden="true"
+              style="font-size: 27px"
+            ></i>
+            <i
+              class="fa fa-times"
+              aria-hidden="true"
+              style="font-size: 23px"
+            ></i>
+          </div>
+          <div class="setting">
+            <div class="third-logo">
+              <i
+                class="fa fa-comments"
+                aria-hidden="true"
+                style="font-size: 45px"
+              ></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="cards-doc">
+      <div class="first-text">
+        <div class="initialText">
+        <h1 style="font-size: 75px; margin: 0px">
+          <span style="color: lightgrey; font-size: 80px">Our</span> Collections
+        </h1>
+        <p style="font-size: 16px">
+          Explore our diverse range of knitted bags, each thoughfully designed
+          to cater<br />to your needs and style preferences:
+        </p>
+    </div>
+        <div class="container">
+            <div class="third-card">
+              <h3 style="color: white">Clutches</h3>
+              <p style="color: white; margin-bottom: 30px">
+                Elegant and compact, perfect for<br />special occasions.
+              </p>
+              <p
+                style="
+                  border: 1px solid black;
+                  padding: 10px;
+                  width: 135px;
+                  background-color: white;
+                  border: none;
+                  border-radius: 7px;
+                  margin-top: 65%;
+                "
+              >
+                Discover More
+                <i
+                  class="fa fa-angle-right"
+                  style="font-size: 18px"
+                  aria-hidden="true"
+                ></i>
+              </p>
+            </div>
+          </div>
+      </div>
+      <div class="parntOfCards">
+        <div class="container">
+          <div class="firstTxtOnPic">
+            <h1>Crossbody<br />Bags</h1>
+            <p>Convenient and chic, ideal<br />for hands-free outings.</p>
+            <p
+              style="
+                border: 1px solid black;
+                padding: 10px;
+                width: 135px;
+                background-color: white;
+                border: none;
+                border-radius: 7px;
+                margin-top: 45px;
+              "
+            >
+              Discover More
+              <i
+                class="fa fa-angle-right"
+                style="font-size: 18px"
+                aria-hidden="true"
+              ></i>
+            </p>
+          </div>
+        </div>
+        <div class="container">
+          <div class="sndCardTxt">
+            <h2>Backpacks</h2>
+            <p1>
+              Functional and fashionable, great for<br />your on-the-go
+              lifestyle.
+            </p1>
+            <p
+              style="
+                border: 1px solid black;
+                padding: 10px;
+                background-color: white;
+                width: 135px;
+                border: none;
+                border-radius: 7px;
+                margin-top: 215px;
+              "
+            >
+              Discover More
+              <i
+                class="fa fa-angle-right"
+                style="font-size: 18px"
+                aria-hidden="true"
+              ></i>
+            </p>
+          </div>
+        </div>
+        
+      </div>
+      <div class="lstPart">
+        <div class="bth-btns">
+          <button
+            style="
+              width: 65%;
+              border: none;
+              font-size: 25px;
+              border-radius: 10px;
+            "
+          >
+            New Collection
+            <i
+              class="fa fa-arrow-right"
+              aria-hidden="true"
+              style="
+                border: 1px solid;
+                padding: 7px;
+                background-color: white;
+                border: none;
+                border-radius: 5px;
+              "
+            ></i>
+          </button>
+          <button
+            style="
+              width: 65%;
+              border: none;
+              font-size: 25px;
+              border-radius: 10px;
+              background-color: #679367;
+            "
+          >
+            Sale Collection
+            <i
+              class="fa fa-arrow-right"
+              aria-hidden="true"
+              style="
+                border: 1px solid;
+                padding: 7px;
+                background-color: white;
+                border: none;
+                border-radius: 5px;
+              "
+            ></i>
+          </button>
+        </div>
+        <p style="font-size: 13px">
+          Each of our bags is meticulously crafted by skilled artisans using
+          high-<br />quality, eco-friendly materials.Our mission is to provide
+          you with<br />accessories that are not only stylish but also
+          sustainable and ethically made.
+        </p>
+      </div>
+    </section>
+    <section class="thrd-doc">
+      <h1 style="text-align: center; font-size: 55px">
+        <span style="color: burlywood">Why Choose</span> Knitty Chic Bags
+      </h1>
+      <p style="text-align: center; font-size: 12px">
+        Explore our diverse range of kitted bags, each thoughfully designed to
+        cater<br />to your needs and style preferences:
+      </p>
+      <div class="prntBttn">
+      <div class="bttns-sttngs">
+        <button
+          style="
+            background-color: #fff4e6;
+            padding: 30px;
+            border-radius: 15px;
+            border: none;
+            height: 350px;
+          "
+        >
+          <div class="intror-bttns">
+            <i
+              class="fa fa-star-o"
+              aria-hidden="true"
+              style="
+                margin-bottom: 60px;
+                border-radius: 15px;
+                font-size: 40px;
+                padding: 25px;
+                background-color: white;
+              "
+            ></i
+            ><br />
+            <h style="font-size: 25px">Handcrafted Quality</h>
+            <p style="margin-top: 60px">
+              Every bag is a labor of love, ensuring you<br />receive a product
+              of exceptional quality<br />and uniqueness.
+            </p>
+          </div>
+        </button>
+        
+          <button
+            style="
+              background-color: #fff4e6;
+              padding: 30px;
+              border-radius: 15px;
+              border: none;
+              height: 350px;
+              margin-top: 105px;
+            "
+          >
+            <div class="intror-bttns">
+              <i
+                class="fa fa-tree"
+                aria-hidden="true"
+                style="
+                  margin-bottom: 60px;
+                  border-radius: 15px;
+                  font-size: 40px;
+                  padding: 25px;
+                  background-color: white;
+
+                "
+              ></i
+              ><br />
+              <h style="font-size: 25px">Sustainable Fashion</h>
+              <p style="margin-top: 60px">
+                We are committed to using eco-friendly<br />materials and
+                sustainable practices in<br />our production process.
+              </p>
+            </div>
+          </button>
+        </div>
+        <div class="twoBttnsttngs">
+          <button
+            style="
+              background-color: #fff4e6;
+              padding: 30px;
+              border-radius: 15px;
+              border: none;
+              height: 350px;
+              margin-top: 105px;
+            "
+          >
+            <div class="intror-bttns">
+              <i
+                class="fa fa-hourglass-end"
+                aria-hidden="true"
+                style="
+                  margin-bottom: 60px;
+                  border-radius: 15px;
+                  font-size: 40px;
+                  padding: 25px;
+                  background-color: white;
+                "
+              ></i>
+              <br />
+              <h style="font-size: 25px">Timeless Design</h>
+              <p style="margin-top: 60px">
+                Our designs are timeless, versatile, and<br />
+                perfect for any occasion.
+              </p>
+            </div>
+          </button>
+        
+        <button
+          style="
+            background-color: #fff4e6;
+            padding: 30px;
+            border-radius: 15px;
+            border: none;
+            height: 350px;
+          "
+        >
+          <div class="intror-bttns">
+            <i
+              class="fa fa-handshake-o"
+              aria-hidden="true"
+              style="
+                margin-bottom: 60px;
+                border-radius: 15px;
+                font-size: 40px;
+                padding: 25px;
+                background-color: white;
+              "
+            ></i
+            ><br />
+            <h style="font-size: 25px">Support Artisans</h>
+            <p style="margin-top: 60px">
+              By choosing our bags, you support skilled<br />artisans and
+              contribute to preserving<br />
+              traditional crafts.
+            </p>
+          </div>
+        </button>
+    </div>
+</div>
+    
+    </section>
+    <section class="last-doc">
+      <div class="forth-doc">
+        <div class="frth-heading">
+          <h1 style="font-size: 65px; margin: 0px">
+            <span style="color: lightgrey; font-size: 65px">Our</span> Popular
+            Collection
+          </h1>
+          <button
+            style="
+              font-size: 13px;
+              background-color: #ffbe46;
+              border-radius: 5px;
+              border: none;
+              width: 115px;
+              margin: 20px;
+            "
+          >
+            Open Store
+            <i
+              class="fa fa-angle-right"
+              style="font-size: 18px"
+              aria-hidden="true"
+            ></i>
+          </button>
+        </div>
+        <p style="font-size: 13px">
+          Explore our diverse range of knitted bags, each thoughfully designed
+          to cater<br />to your needs and style preferences:
+        </p>
+      </div>
+      <div class="lefter-img">
+        <div class="prntLftr">
+        <div class="mainLftrimg">
+        <button style="background-image: url(images/korean\ bags.webp); height: 465px;
+        width: 300px;
+        border-radius: 25px;
+        border: none;
+        padding: 20px;">
+                <div class="bttnLftrimg">
+                    <p
+                    style="
+                      border: 1px solid black;
+                      padding: 10px;
+                      width: 135px;
+                      background-color: white;
+                      border: none;
+                      border-radius: 7px;
+                      margin-top: 300px;
+                      height: 18px;
+                    "
+                  >
+                    Discover More
+                    <i
+                      class="fa fa-angle-right"
+                      style="font-size: 18px"
+                      aria-hidden="true"
+                    ></i>
+                  </p>
+                </div>
+        </button>
+        </div>
+    </div>
+    <div class="parentBttns">
+    <div class="last-blocks">
+
+    
+    <button style="background-color: #679367;  padding: 10px 40px;
+      color: white;
+      font-size: 25px;
+      border-radius: 8px;
+      border: none;
+       height: 50px;">Tote Bags</button>
+    <button style="background-color: white;  padding: 10px 40px;
+      font-size: 23px;
+      border-radius: 8px;
+      height: 50px;">Crossbody bags</button>
+    <button style="background-color: white;  padding: 10px 40px;
+        font-size: 23px;
+        border-radius: 8px;
+        height: 50px;">Clutches</button>
+    <button style="background-color: white;  padding: 10px 40px;
+        font-size: 23px;
+        border-radius: 8px;
+        height: 50px;">Backpacks</button>
+    </div>
+    <div class="finallyBagsPrice">
+        <button style=" border-radius: 15px;
+        border: none;
+        width: 280px;
+        height: 355px;
+        padding: 10px 20px;
+        ">
+        <div class="prnt">
+        <div class="text"><h1 style="text-align: left;
+        font-size: 15px;">Knittedd bags #4 <br>$250.00  </div>
+        <div class="logo">
+         <i class="fa fa-cart-plus" aria-hidden="true" style="    font-size: 20px;
+         background-color: white;
+         padding: 5px;
+         border-radius: 5px;
+         height: 20px;"></i>
+        </div>
+        </div>
+        </h1>
+        <img src="images/kite1.jpeg" alt="bag" style="height: 120px;
+        border-radius: 28px;
+        background-color: darkgray;
+        margin-top: 100px;"></button>
+        <button style=" border-radius: 15px;
+        border: none;
+        width: 280px;
+        height: 355px;
+        padding: 10px 20px;
+        ">
+        <div class="prnt">
+        <div class="text"><h1 style="text-align: left;
+        font-size: 15px;">Knittedd bags #28 <br>$126.00  </div>
+        <div class="logo">
+         <i class="fa fa-cart-plus" aria-hidden="true" style="    font-size: 20px;
+         background-color: white;
+         padding: 5px;
+         border-radius: 5px;
+         height: 20px;"></i>
+        </div>
+        </div>
+        </h1>
+        <img src="images/knite prcious.jpeg" alt="bag" style="height: 120px;
+        border-radius: 28px;
+        background-color: darkgray;
+        margin-top: 100px;"></button>
+        <button style=" border-radius: 15px;
+        border: none;
+        width: 280px;
+        height: 355px;
+        padding: 10px 20px;
+        ">
+        <div class="prnt">
+        <div class="text"><h1 style="text-align: left;
+        font-size: 15px;">Knittedd bags #86 <br>$150.00 </div>
+        <div class="logo">
+        <i class="fa fa-cart-plus" aria-hidden="true" style="    font-size: 20px;
+        background-color: white;
+        padding: 5px;
+        border-radius: 5px;
+        height: 20px;"></i>
+        </div>
+        </div>
+        </h1>
+        <img src="images/knite prcious.jpeg" alt="bag" style="height: 120px;
+        border-radius: 50px;
+        background-color: darkgray;
+        margin-top: 100px;"></button>
+        </div>
+    </div>
+    </div>
+    <div class="prntInform">
+    <div class="firstInform">
+    <h1>kHiY</h1>
+    <p>BAGS</p>
+    <p>Rotonda Giuliani 3 Bianco<br>vento,62383 Bergamo (VS)</p>
+    <p>info@kniybags.com</p>
+</div>
+<div class="secndInform">
+<h1>Menu</h1>
+<p>Home</p>
+<p>Membership</p>
+<p>About</p>
+<p>Blog</p>
+</div>
+<div class="thirdInform">
+<h1>Operational</h1>
+<p>Every daly:9:00 - 22:00</p>
+<p>Sat-Sun: 8:00 - 21:00</p>
+<h1>You need a consult?</h1>
+<p>+(123) 1800-567-8990</p>
+</div>
+
+<div class="bottomText">
+<h1>Subscribe to our newsletter</h1>
+<input type="email" id="email" placeholder="Email" style=" padding: 13px;
+border-radius: 10px;">
+<button style="background-color: black; color: white; padding: 13px; border-radius: 10px; width: 110px;
+font-size: 18px;">Subscribe</button>
+<p>Subscribe to our newsletter to be the first to know <br> about news and offers</p>
+</div>
+</div>
+<div class="prntLogos">
+<div class="visaCards">
+<img src="images/visa.png" alt="card" style="height: 20px;">
+<img src="images/mastercard.png" alt="card" style="height: 20px;">
+<img src="images/applepay.png" alt="card" style="height: 25px; border-radius: 10px;">
+</div> 
+<div class="svgLogo">
+<i class="fa fa-facebook" aria-hidden="true" style=" border: 2px solid;
+padding: 5px;
+border-radius: 15px;
+color: lightgrey;"></i>
+<i class="fa fa-twitter" aria-hidden="true" style=" border: 2px solid;
+padding: 5px;
+border-radius: 15px;
+color: lightgrey;"></i>
+<i class="fa fa-instagram" aria-hidden="true" style=" border: 2px solid;
+padding: 5px;
+border-radius: 15px;
+ color: lightgrey;"></i>
+</div>
+</div>
+<div class="wrttnLogos">
+    <div class="visaCards">
+   <p style="font-size: 13px;">Copyright c KNIY.All Rights Reserved.</p>
+    </div> 
+    <div class="svgLogo">
+   <p style="font-size: 13px;">Login</p>
+   <p style="font-size: 13px;">Register</p>
+   <p style="font-size: 13px;">Contact Us</p>
+   <p style="font-size: 13px;">Privacy Policy</p>
+    </div>
+    </div>
+   </section>
+  </body>
+</html>
+
+
+
+
